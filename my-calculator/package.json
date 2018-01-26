@@ -1,0 +1,14 @@
+{
+  "name": "my-calculator",
+  "version": "1.0.0",
+  "description": "A calculator for practicing Jest tests",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^22.1.3"
+  }
+}
