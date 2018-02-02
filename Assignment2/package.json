@@ -4,10 +4,26 @@
 	"description": "CS-554 assignment2 Submission for Albert Tang",
 	"main": "app.js",
 	"scripts": {
+		"gulp": "gulp",
 		"start": "node app.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
 	"author": "Albert Tang",
-	"license": "ISC"
+	"license": "ISC",
+	"dependencies": {
+		"bootstrap": "^4.0.0-beta.3",
+		"express": "^4.16.2",
+		"gulp": "^3.9.1",
+		"gulp-autoprefixer": "4.1.0",
+		"gulp-clean-css": "3.9.2",
+		"gulp-concat": "2.6.1",
+		"gulp-rename": "1.2.2",
+		"gulp-sass": "3.1.0",
+		"gulp-sourcemaps": "2.6.4",
+		"jquery": "3.3.1",
+		"popper.js": "^1.13.0",
+		"pug": "^2.0.0-rc.4",
+		"tether": "^1.4.3"
+	}
 }
