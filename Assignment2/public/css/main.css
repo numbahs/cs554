@@ -6064,7 +6064,8 @@ html {
 
 @media only screen and (max-width: 767px) {
   #mainNav {
-    flex-flow: row wrap !important; } }
+    flex-flow: row wrap !important;
+    padding: 0px; } }
 
 @media only screen and (min-width: 768px) {
   #mainNav {
@@ -6078,7 +6079,8 @@ html {
   a {
     font-size: 50%;
     width: 50%;
-    margin: 2px 0px; } }
+    margin: 2px 0px;
+    padding: 0px; } }
 
 @media only screen and (min-width: 768px) {
   a {
@@ -6091,17 +6093,14 @@ html {
   padding: 3px;
   margin: 1.5px 0px; }
 
-@media only screen and (min-width: 768px) {
-  .row {
-    width: 100% !important;
-    height: 100% !important;
-    justify-content: flex-end; } }
+.row {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0px !important; }
 
 .container {
+  max-width: 100% !important;
   margin: 0px;
   padding: 0px;
   width: 100%; }
-  @media (min-width: 1920px) {
-    .container {
-      max-width: 1866px; } }
 
