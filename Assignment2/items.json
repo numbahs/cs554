@@ -3,79 +3,79 @@
     "title": "Pan with Chicken and Zucchini",
     "img": "/images/image1.jpg",
     "cred": "Photo by Simon Migaj on Unsplash",
-    "desc": "test",
+    "desc": "One of the best pans out there!",
     "modal" : "panModal1",
-    "desc2": "more info"
+    "desc2": "This pan is great for making chicken with zucchini!"
   }, {
     "id": "pan2",
     "title": "Pan with Eggs and a Whisk",
     "img": "/images/image2.jpg",
     "cred": "Photo by Bernard Tuck on Unsplash",
-    "desc": "test",
+    "desc": "Eggs can't even handle it!",
     "modal" : "panModal2",
-    "desc2": "more info"
+    "desc2": "Making eggs has never been easier with this egg pan!"
   }, {
     "id": "pan3",
     "title": "Pan with Food Inside",
     "img": "/images/image3.jpg",
     "cred": "Photo by Annie Spratt on Unsplash",
-    "desc": "test",
+    "desc": "Food making made easy!",
     "modal" : "panModal3",
-    "desc2": "more info"
+    "desc2": "This pan makes food easy and fast!"
   }, {
     "id": "pan4",
     "title": "Pan with Vegetables",
     "img": "/images/image4.jpg",
     "cred": "Photo by Stacey Doyle on Unsplash",
-    "desc": "test",
+    "desc": "Eat more veggies with this pan!",
     "modal" : "panModal4",
-    "desc2": "more info"
+    "desc2": "Veggies statistically cook faster with this pan!"
   }, {
     "id": "pan5",
     "title": "Pan with Macaroni and Sauce",
     "img": "/images/image5.jpg",
     "cred": "Photo by Atharva Lele on Unsplash",
-    "desc": "test",
+    "desc": "Macaroni has never tasted better!",
     "modal" : "panModal5",
-    "desc2": "more info"
+    "desc2": "Macaroni making made easy!"
   }, {
     "id": "pan6",
     "title": "Pan with Vegetables, Melted Cheese, Parsley and Sauce",
     "img": "/images/image6.jpg",
     "cred": "Photo by Eaters Collective on Unsplash",
-    "desc": "test",
+    "desc": "Deliciousness in a pan!",
     "modal" : "panModal6",
-    "desc2": "more info"
+    "desc2": "Quick and easy cooking even for those who don't cook!"
   }, {
     "id": "pan7",
-    "title": "Pan with Fish and Lemons",
+    "title": "Stir-fry pan",
     "img": "/images/image7.jpg",
-    "cred": "Photo by Robson Hatsukami Morgan on Unsplash",
-    "desc": "test",
+    "cred": "Photo by Clem Onojeghuo on Unsplash",
+    "desc": "Pan for pros!",
     "modal" : "panModal7",
-    "desc2": "more info"
+    "desc2": "This pan is not for a \"noob\" of cooking, only those with 10 years of cooking experience can properly use this"
   }, {
     "id": "pan8",
     "title": "Pan with Sunny Side Up Eggs",
     "img": "/images/image8.jpg",
     "cred": "Photo by Jarosław Ceborski on Unsplash",
-    "desc": "test",
+    "desc": "You won't regret this purchase!",
     "modal" : "panModal8",
-    "desc2": "more info"
+    "desc2": ""
   }, {
     "id": "pan9",
     "title": "Pan with Fish on a Wooden Fire",
     "img": "/images/image9.jpg",
     "cred": "Photo by John Salzarulo on Unsplash",
-    "desc": "test",
+    "desc": "Perfect for camping!",
     "modal" : "panModal9",
-    "desc2": "more info"
+    "desc2": "Just the right size to cook the things you want!"
   }, {
     "id": "pan10",
     "title": "Pan with Cookies",
     "img": "/images/image10.jpg",
     "cred": "Photo by Mara Conan on Unsplash",
-    "desc": "test",
+    "desc": "Maybe not right for baking.",
     "modal" : "panModal10",
-    "desc2": "more info"
+    "desc2": "But cookies are great as food!"
   }]

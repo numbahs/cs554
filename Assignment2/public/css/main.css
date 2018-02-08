@@ -6050,7 +6050,9 @@ img {
 
 body,
 html {
-  font-family: Verdana, Geneva, sans-serif; }
+  font-family: Verdana, Geneva, sans-serif;
+  width: 100vw;
+  height: 100vh; }
   @media only screen and (max-width: 767px) {
     body,
     html {
@@ -6062,24 +6064,29 @@ html {
 
 @media only screen and (max-width: 767px) {
   #mainNav {
-    flex-direction: row !important;
-    align-items: flex-start;
-    justify-content: center;
-    align-content: none !important; } }
+    flex-flow: row wrap !important; } }
 
 @media only screen and (min-width: 768px) {
   #mainNav {
     align-items: flex-start;
     flex-direction: column !important;
     justify-content: flex-start;
-    width: auto; } }
+    width: 17%; } }
 
-a {
-  margin: 2px 0px; }
+@media only screen and (max-width: 767px) {
+  a {
+    font-size: 50%;
+    width: 50%;
+    margin: 2px 0px; } }
+
+@media only screen and (min-width: 768px) {
+  a {
+    margin: 4px 0px; } }
 
 .modal-footer {
   justify-content: space-between !important; }
 
 .card {
+  padding: 3px;
   margin: 1.5px 0px; }
 
