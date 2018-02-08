@@ -3,16 +3,29 @@ html
     meta(charset='utf-8')
     title=title
     link(rel="stylesheet", href=css)
-  body
-    nav.navbar.navbar-default.d-flex
-    .container
+  body.d-flex
+    nav.navbar.navbar-default.d-flex(id="mainNav")
+      each item in lst
+        a(href='#'+item.id id='test')=item.title
+    div.d-flex
       .row
         each item in lst
-          .card.col-sm-12.col-md-6.col-lg-4
+          .card.col-sm-12.col-md-6.col-lg-4(id=item.id)
             .card-img-top
               img(src=item.img)
             .card-body
               .card-title=item.title
               .card-text=item.desc
-              .card-footer.textmuted=item.cred
+            button(type="button" data-toggle="modal", 
+            data-target="#"+item.modal).btn.btn-primary more info
+            .modal.fade(id=item.modal tabindex='-1' role='dialog' aria-labelledby=item.id aria-hidden='true')
+              .modal-dialog(role='document')
+                .modal-content
+                  .modal-header
+                    h5.modal-title(id=item.id)=item.title
+                    button.close(type='button' data-dismiss='modal' aria-label='Close')
+                      span(aria-hidden='true') &times;
+                  .modal-body=item.desc2
+                  .modal-footer=item.cred
+                    button.btn.btn-secondary(type='button' data-dismiss='modal') Close
     script(src=js)

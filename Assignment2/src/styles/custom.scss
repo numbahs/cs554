@@ -1,5 +1,5 @@
 @import "variables";
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
 
 /* 
   That imports the entirety of bootstrap, taken from ../../node_modules/bootstrap/scss/bootstrap.scss
@@ -45,48 +45,45 @@
 
  */
 
-@mixin border-bottom($size) {
-    border-bottom: $size solid #000;
-}
-
 img {
   max-width: 100%;
   max-height: 100%;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body,
 html {
-    background: $body-background;
-    color: darken($brand-primary, 20%);
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    font-size: $primary-font-size;
-    background-clip: border-box;
+    font-family: Verdana, Geneva, sans-serif;
+    @media only screen and (max-width: 767px) {
+        flex-direction: column !important;
+    }
+    @media only screen and (min-width: 768px) {
+        flex-direction: row !important;
+    }
 }
 
-p {
-    font-size: $secondary-font-size;
+#mainNav {
+    @media only screen and (max-width: 767px) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        flex-direction: row !important;
+        align-items: flex-start;
+        justify-content: center;
+        align-content: none !important; 
+    }
+    @media only screen and (min-width: 768px) {
+        align-items: flex-start;
+        flex-direction: column !important;
+        justify-content: flex-start;
+        width: auto;
+    }
 }
 
-section.#{$main-content-class} {
-    h2 {
-        @include border-bottom(2px);
-    }
-    p {
-        @if $main-content-class==book {
-            font-size: 12pt;
-        }
-        @else {
-            font-size: $secondary-font-size+6pt;
-        }
-        main & {
-            color: $brand-primary;
-        }
-        span {
-            font-style: italic;
-        }
-    }
+a {
+    margin: 2px 0px;
+}
+
+.modal-footer {
+    justify-content: space-between !important;
+}
+
+.card {
+    margin: 1.5px 0px;
 }

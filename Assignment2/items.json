@@ -1,51 +1,81 @@
 [{
+    "id": "pan1",
     "title": "Pan with Chicken and Zucchini",
     "img": "/images/image1.jpg",
     "cred": "Photo by Simon Migaj on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal1",
+    "desc2": "more info"
   }, {
+    "id": "pan2",
     "title": "Pan with Eggs and a Whisk",
     "img": "/images/image2.jpg",
     "cred": "Photo by Bernard Tuck on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal2",
+    "desc2": "more info"
   }, {
+    "id": "pan3",
     "title": "Pan with Food Inside",
     "img": "/images/image3.jpg",
     "cred": "Photo by Annie Spratt on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal3",
+    "desc2": "more info"
   }, {
+    "id": "pan4",
     "title": "Pan with Vegetables",
     "img": "/images/image4.jpg",
     "cred": "Photo by Stacey Doyle on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal4",
+    "desc2": "more info"
   }, {
+    "id": "pan5",
     "title": "Pan with Macaroni and Sauce",
     "img": "/images/image5.jpg",
     "cred": "Photo by Atharva Lele on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal5",
+    "desc2": "more info"
   }, {
+    "id": "pan6",
     "title": "Pan with Vegetables, Melted Cheese, Parsley and Sauce",
     "img": "/images/image6.jpg",
     "cred": "Photo by Eaters Collective on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal6",
+    "desc2": "more info"
   }, {
+    "id": "pan7",
     "title": "Pan with Fish and Lemons",
     "img": "/images/image7.jpg",
     "cred": "Photo by Robson Hatsukami Morgan on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal7",
+    "desc2": "more info"
   }, {
+    "id": "pan8",
     "title": "Pan with Sunny Side Up Eggs",
     "img": "/images/image8.jpg",
     "cred": "Photo by Jarosław Ceborski on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal8",
+    "desc2": "more info"
   }, {
+    "id": "pan9",
     "title": "Pan with Fish on a Wooden Fire",
     "img": "/images/image9.jpg",
     "cred": "Photo by John Salzarulo on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal9",
+    "desc2": "more info"
   }, {
+    "id": "pan10",
     "title": "Pan with Cookies",
     "img": "/images/image10.jpg",
     "cred": "Photo by Mara Conan on Unsplash",
-    "desc": "test"
+    "desc": "test",
+    "modal" : "panModal10",
+    "desc2": "more info"
   }]
