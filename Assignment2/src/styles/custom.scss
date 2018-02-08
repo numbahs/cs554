@@ -104,13 +104,10 @@ a {
     }
 }
 
-@media (min-width: 1920px) {
-    .container {
+.container {
+    @media (min-width: 1920px) {  
         max-width: 1866px;
     }
-}
-
-.container {
     margin: 0px;
     padding: 0px;
     width: 100%;
