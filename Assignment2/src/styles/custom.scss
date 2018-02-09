@@ -53,25 +53,16 @@ img {
 body,
 html {
     @media all {
-        overflow: scroll;
+        overflow-y: scroll;
     }
     background-color: #6ccff6;
     font-family: Verdana, Geneva, sans-serif;
     height: 100%;
     width: 100%;
-    @media only screen and (max-width: 767px) {
-        flex-direction: column !important;
-    }
-    @media only screen and (min-width: 768px) {
-        flex-direction: row !important;
-    }
 }
 
 #mainNav {
-    border: solid #757780;
-    border-radius: 3px;
     height: 100%;
-    // overflow: scroll;
     @media only screen and (max-width: 767px) {
         flex-flow: row wrap !important;
         padding: 0px;
@@ -80,7 +71,6 @@ html {
         align-items: flex-start;
         flex-direction: row !important;
         padding: 0px;
-        // justify-content: flex-start;
         width: 15%;
     }
 }
@@ -103,7 +93,8 @@ a {
 }
 
 .card {
-    background-color: #fffffc;
+    background-color: #757780;
+    text-decoration-color: #001011;
     padding: 3px;
     margin: 1.5px 0px;
 }
@@ -119,8 +110,10 @@ a {
     margin: 0px;
     padding: 0px;
     width: 100%;
-}
-
-#items {
-    // overflow: scroll;
+    @media only screen and (max-width: 767px) {
+        flex-direction: column !important;
+    }
+    @media only screen and (min-width: 768px) {
+        flex-direction: row !important;
+    }
 }

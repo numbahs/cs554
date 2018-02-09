@@ -6057,19 +6057,9 @@ html {
   @media all {
     body,
     html {
-      overflow: scroll; } }
-  @media only screen and (max-width: 767px) {
-    body,
-    html {
-      flex-direction: column !important; } }
-  @media only screen and (min-width: 768px) {
-    body,
-    html {
-      flex-direction: row !important; } }
+      overflow-y: scroll; } }
 
 #mainNav {
-  border: solid #757780;
-  border-radius: 3px;
   height: 100%; }
   @media only screen and (max-width: 767px) {
     #mainNav {
@@ -6098,7 +6088,8 @@ a {
   justify-content: space-between !important; }
 
 .card {
-  background-color: #fffffc;
+  background-color: #757780;
+  text-decoration-color: #001011;
   padding: 3px;
   margin: 1.5px 0px; }
 
@@ -6112,4 +6103,10 @@ a {
   margin: 0px;
   padding: 0px;
   width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .container {
+      flex-direction: column !important; } }
+  @media only screen and (min-width: 768px) {
+    .container {
+      flex-direction: row !important; } }
 
