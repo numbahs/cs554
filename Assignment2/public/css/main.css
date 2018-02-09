@@ -6054,6 +6054,10 @@ html {
   font-family: Verdana, Geneva, sans-serif;
   height: 100%;
   width: 100%; }
+  @media all {
+    body,
+    html {
+      overflow: scroll; } }
   @media only screen and (max-width: 767px) {
     body,
     html {
@@ -6108,7 +6112,4 @@ a {
   margin: 0px;
   padding: 0px;
   width: 100%; }
-
-#items {
-  overflow: scroll; }
 

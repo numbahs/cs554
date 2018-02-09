@@ -6,7 +6,6 @@
     "desc": "One of the best pans out there!",
     "modal": "panModal1",
     "modaltitle": "panModalTitle1",
-    "alt": "panAlt1",
     "desc2": "This pan is great for making chicken with zucchini!"
   }, {
     "id": "pan2",
@@ -16,7 +15,6 @@
     "desc": "Eggs can't even handle it!",
     "modal" : "panModal2",
     "modaltitle": "panModalTitle2",
-    "alt": "panAlt2",
     "desc2": "Making eggs has never been easier with this egg pan!"
   }, {
     "id": "pan3",
@@ -26,7 +24,6 @@
     "desc": "Food making made easy!",
     "modal" : "panModal3",
     "modaltitle": "panModalTitle3",
-    "alt": "panAlt3",
     "desc2": "This pan makes food easy and fast!"
   }, {
     "id": "pan4",
@@ -36,7 +33,6 @@
     "desc": "Eat more veggies with this pan!",
     "modal" : "panModal4",
     "modaltitle": "panModalTitle4",
-    "alt": "panAlt4",
     "desc2": "Veggies statistically cook faster with this pan!"
   }, {
     "id": "pan5",
@@ -46,7 +42,6 @@
     "desc": "Macaroni has never tasted better!",
     "modal" : "panModal5",
     "modaltitle": "panModalTitle5",
-    "alt": "panAlt5",
     "desc2": "Macaroni making made easy!"
   }, {
     "id": "pan6",
@@ -56,7 +51,6 @@
     "desc": "Deliciousness in a pan!",
     "modal" : "panModal6",
     "modaltitle": "panModalTitle6",
-    "alt": "panAlt6",
     "desc2": "Quick and easy cooking even for those who don't cook!"
   }, {
     "id": "pan7",
@@ -66,7 +60,6 @@
     "desc": "Pan for pros!",
     "modal" : "panModal7",
     "modaltitle": "panModalTitle7",
-    "alt": "panAlt7",
     "desc2": "This pan is not for a \"noob\" of cooking, only those with 10 years of cooking experience can properly use this"
   }, {
     "id": "pan8",
@@ -76,7 +69,6 @@
     "desc": "You won't regret this purchase!",
     "modal" : "panModal8",
     "modaltitle": "panModalTitle8",
-    "alt": "panAlt8",
     "desc2": "Eggs have never been tastier!"
   }, {
     "id": "pan9",
@@ -86,7 +78,6 @@
     "desc": "Perfect for camping!",
     "modal" : "panModal9",
     "modaltitle": "panModalTitle9",
-    "alt": "panAlt9",
     "desc2": "Just the right size to cook the things you want!"
   }, {
     "id": "pan10",
@@ -96,6 +87,5 @@
     "desc": "Maybe not right for baking.",
     "modal" : "panModal10",
     "modaltitle": "panModalTitle10",
-    "alt": "panAlt10",
     "desc2": "But cookies are great as food!"
   }]

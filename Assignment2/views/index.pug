@@ -13,7 +13,7 @@ html
         each item in lst
           .card.col-sm-12.col-md-6.col-lg-4(id=item.id)
             .card-img-top
-              img(src=item.img alt=item.alt)
+              img(src=item.img alt=`Picture of ${item.title}`)
             .card-body
               .card-title=item.title
               .card-text=item.desc
