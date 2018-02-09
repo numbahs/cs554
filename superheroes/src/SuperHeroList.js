@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
+import SuperHeroListEntry from './SuperHeroListEntry';
 
 class SuperHeroList extends Component {
   render() {
-    if(this.props.superHero) {
-      return <h1>Results for {this.props.superHero}</h1>
-    }
-    return <h1>Search for Someone</h1>
+    return (
+      <div>
+        <h1>{this.props.heroList.length} results</h1>
+        <ul>
+          {this.props.heroList.map(hero => {
+            return <SuperHeroListEntry hero={hero} key={hero.id}/>
+          })}
+        </ul>
+      </div>
+    );
   }
 }
 
