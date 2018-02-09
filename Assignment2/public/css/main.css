@@ -6065,9 +6065,6 @@ html {
   justify-content: center !important;
   align-items: center !important; }
 
-#four04 > a:hover {
-  color: #fffffc; }
-
 #mainNav {
   height: 100%; }
   @media only screen and (max-width: 767px) {
@@ -6092,6 +6089,9 @@ a {
   @media only screen and (min-width: 768px) {
     a {
       padding: 0px 10px 5px 0px; } }
+
+a:hover {
+  color: #fffffc; }
 
 .modal-footer {
   justify-content: space-between !important; }
