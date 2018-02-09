@@ -1,11 +1,11 @@
 doctype html
-html
+html(lang="en")
   head
     meta(charset='utf-8')
     title=title
     link(rel="stylesheet", href=css)
   body
-    div.container.d-flex
+    .container.d-flex
       nav.navbar.navbar-default(id="mainNav")
         each item in lst
           a(href='#'+item.id)=item.title
@@ -23,7 +23,7 @@ html
                 .modal-dialog(role='document')
                   .modal-content
                     .modal-header
-                      h5.modal-title(id=item.modalTitle)=item.title
+                      h1.modal-title(id=item.modalTitle)=item.title
                       button.close(type='button' data-dismiss='modal' aria-label='Close')
                         span(aria-hidden='true') &times;
                     .modal-body=item.desc2

@@ -6059,6 +6059,15 @@ html {
     html {
       overflow-y: scroll; } }
 
+#four04 {
+  color: #000909;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important; }
+
+#four04 > a:hover {
+  color: #fffffc; }
+
 #mainNav {
   height: 100%; }
   @media only screen and (max-width: 767px) {
@@ -6089,7 +6098,7 @@ a {
 
 .card {
   background-color: #757780;
-  color: #001011;
+  color: #000909;
   padding: 3px;
   margin: 1.5px 0px; }
 
@@ -6110,6 +6119,9 @@ a {
     .container {
       flex-direction: row !important; } }
 
+.modal-title {
+  font-size: 25px; }
+
 .modal-header {
   border-bottom: 1px solid #001011; }
 
@@ -6120,6 +6132,10 @@ a {
   color: #fffffc;
   border: solid #001011;
   background-color: #757780; }
+
+.btn-primary {
+  color: #fffffc;
+  background-color: #0081a1; }
 
 .btn-secondary {
   background-color: #6ccff6;

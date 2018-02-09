@@ -11,7 +11,11 @@ const constructorMethod = (app) => {
   })
 
   app.use('*', (req, res) => {
-      res.status(404).json({error: "Route not found."});
+      res.status(404).render('404', {
+        title: 'Frying Pans: 404',
+        js: "/js/vendor.min.js",
+        css: "/css/main.min.css"
+      })
   })
 }
 
