@@ -18,8 +18,7 @@ html
               .card-body
                 .card-title=item.title
                 .card-text=item.desc
-              button(type="button" data-toggle="modal", 
-              data-target="#"+item.modal).btn.btn-primary more info
+              button(type="button" data-toggle="modal", data-target="#"+item.modal).btn.btn-primary more info
               .modal.fade(id=item.modal tabindex='-1' role='dialog' aria-labelledby=item.id aria-hidden='true')
                 .modal-dialog(role='document')
                   .modal-content

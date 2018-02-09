@@ -6089,7 +6089,7 @@ a {
 
 .card {
   background-color: #757780;
-  text-decoration-color: #001011;
+  color: #001011;
   padding: 3px;
   margin: 1.5px 0px; }
 
@@ -6109,4 +6109,19 @@ a {
   @media only screen and (min-width: 768px) {
     .container {
       flex-direction: row !important; } }
+
+.modal-header {
+  border-bottom: 1px solid #001011; }
+
+.modal-footer {
+  border-top: 1px solid #001011; }
+
+.modal-content {
+  color: #fffffc;
+  border: solid #001011;
+  background-color: #757780; }
+
+.btn-secondary {
+  background-color: #6ccff6;
+  color: #001011; }
 
