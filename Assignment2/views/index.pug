@@ -7,7 +7,7 @@ html
     nav.navbar.navbar-default.d-flex(id="mainNav")
       each item in lst
         a(href='#'+item.id)=item.title
-    div.d-flex.container
+    div.d-flex.container(id="items")
       .row
         each item in lst
           .card.col-sm-12.col-md-6.col-lg-4(id=item.id)
