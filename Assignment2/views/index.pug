@@ -6,7 +6,7 @@ html(lang="en")
     link(rel="stylesheet", href=css)
   body
     .container.d-flex
-      nav.navbar.navbar-default(id="mainNav")
+      nav.navbar.navbar-default
         each item in lst
           a(href='#'+item.id)=item.title
       div(id="items")

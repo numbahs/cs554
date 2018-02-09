@@ -68,7 +68,7 @@ html {
     align-items: center !important;
 }
 
-#mainNav {
+.navbar {
     height: 100%;
     @media only screen and (max-width: 767px) {
         flex-flow: row wrap !important;

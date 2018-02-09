@@ -6065,14 +6065,14 @@ html {
   justify-content: center !important;
   align-items: center !important; }
 
-#mainNav {
+.navbar {
   height: 100%; }
   @media only screen and (max-width: 767px) {
-    #mainNav {
+    .navbar {
       flex-flow: row wrap !important;
       padding: 0px; } }
   @media only screen and (min-width: 768px) {
-    #mainNav {
+    .navbar {
       align-items: flex-start;
       flex-direction: row !important;
       padding: 0px;
