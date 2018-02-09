@@ -1,3 +1,4 @@
+doctype html
 html
   head
     meta(charset='utf-8')
@@ -12,7 +13,7 @@ html
         each item in lst
           .card.col-sm-12.col-md-6.col-lg-4(id=item.id)
             .card-img-top
-              img(src=item.img)
+              img(src=item.img alt=item.alt)
             .card-body
               .card-title=item.title
               .card-text=item.desc
@@ -22,7 +23,7 @@ html
               .modal-dialog(role='document')
                 .modal-content
                   .modal-header
-                    h5.modal-title(id=item.id)=item.title
+                    h5.modal-title(id=item.modalTitle)=item.title
                     button.close(type='button' data-dismiss='modal' aria-label='Close')
                       span(aria-hidden='true') &times;
                   .modal-body=item.desc2
