@@ -1,0 +1,3 @@
+[submodule "superheroes"]
+	path = superheroes
+	url = git@github.com:Stevens-CS554/superheroes.git
