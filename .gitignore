@@ -3,3 +3,6 @@ node_modules/
 
 ### VISUAL STUDIO CODE ###
 .vscode/*
+
+### API ###
+spotifyApi.js
