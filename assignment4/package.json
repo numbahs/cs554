@@ -1,0 +1,20 @@
+{
+	"name": "cs-554-assignment4",
+	"version": "1.0.0",
+	"description": "CS-554 assignment4 Submission for Albert Tang",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Albert Tang",
+	"license": "ISC",
+	"dependencies": {
+		"bluebird": "^3.5.1",
+		"body-parser": "^1.18.2",
+		"express": "^4.16.3",
+		"morgan": "^1.9.0",
+		"redis": "^2.8.0"
+	}
+}
