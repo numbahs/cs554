@@ -1,27 +1,46 @@
-const bluebird = require('bluebird');
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
+const data = require('../data');
 const redis = require('redis');
 const client = redis.createClient();
-const data = require('../data');
-const functions = data.functions;
+const { promisify } = require('util');
 
-bluebird.promisifyAll(redis.RedisClient.prototype);
-bluebird.promisifyAll(redis.Multi.prototype);
+const redisGet = promisify(client.get).bind(client);
+const redisSet = promisify(client.set).bind(client);
+const redisLPush = promisify(client.lpush).bind(client);
+const redisLTrim = promisify(client.ltrim).bind(client);
+const redisLRange = promisify(client.lrange).bind(client);
+
+const recentList = async recent => {
+  await redisLPush('recent20', recent);
+  await redisLTrim('recent20', 0, 19);
+}
 
 router.get('/history', async (req, res) => {
-
+  const recent20 = await redisLRange('recent20', 0, 19);
+  const recent20JSON = recent20.map(recent => JSON.parse(recent));
+  res.json(recent20JSON);
 });
 
 router.get('/:id', async (req, res) => {
-  let id = req.params.id;
-  let result = await client.getAsync(id);
-  if (result) {
-    res.json(result);
-  } else {
-    let result = await functions.getById(id);
-    await client.setAsync(id, JSON.stringify(result));
-    res.json(result);
+  try {
+    const id = req.params.id;
+    let result = await redisGet(id);
+    if (result) {
+      await recentList(result);
+      res.json(JSON.parse(result));
+    } else {
+      let result = await data.getById(id);
+      const resultString = JSON.stringify(result);
+      await redisSet(id, resultString);
+      await recentList(resultString);
+      res.json(JSON.parse(resultString));
+    }
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      error: err || 'Internal Error',
+      code: 500
+    })
   }
 })
 

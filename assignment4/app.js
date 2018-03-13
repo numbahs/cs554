@@ -6,14 +6,9 @@
  */
 
 const express = require('express');
-const morgan = require('morgan');
 const constructorMethod = require('./routes');
-const bodyparser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
-
-app.use(bodyparser.json());
-app.use(morgan('dev'));
 
 constructorMethod(app);
 
