@@ -1,3 +1,6 @@
 [submodule "superheroes"]
 	path = superheroes
 	url = git@github.com:Stevens-CS554/superheroes.git
+[submodule "freeze-tag-client"]
+	path = freeze-tag-client
+	url = git@github.com:Stevens-CS554/freeze-tag-client.git
