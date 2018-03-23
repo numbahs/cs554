@@ -12,6 +12,8 @@ let main = async () => {
     'https://gist.githubusercontent.com/philbarresi/5cf15393d245b38a2d86ce8207d5076c/raw/d529fb474c1af347702ca4d7b992256237fa2819/lab5.json'
   );
 
+  console.log('Users grabbed');
+
   redisConnection.on('get:request:*', message => {
     try {
       let { requestId, eventName } = message;
@@ -171,18 +173,10 @@ let main = async () => {
     try {
       let { requestId, eventName } = message;
       let { body } = message.data;
-      let { id, first_name, last_name, email, gender, ip_address } = body;
+      let { first_name, last_name, email, gender, ip_address } = body;
 
       let successEvent = `${eventName}:success:${requestId}`;
       let failedEvent = `${eventName}:failed:${requestId}`;
-
-      if (typeof id !== 'number') {
-        redisConnection.emit(failedEvent, {
-          requestId,
-          data: `${id} is not a number!`,
-          eventName
-        });
-      }
 
       if (typeof first_name !== 'string') {
         redisConnection.emit(failedEvent, {
@@ -225,7 +219,6 @@ let main = async () => {
       }
 
       let set = {
-        id,
         first_name,
         last_name,
         email,
@@ -233,23 +226,16 @@ let main = async () => {
         ip_address
       };
 
-      const result = data.filter(x => x.id === parseInt(id));
+      const result = data.map(x => x.id).reverse();
 
-      if (!result[0]) {
-        data.push(set);
+      set.id = result[0] ? result[0] + 1 : 1;
+      data.push(set);
 
-        redisConnection.emit(successEvent, {
-          requestId,
-          data: set,
-          eventName
-        });
-      } else {
-        redisConnection.emit(failedEvent, {
-          requestId,
-          data: `Server already contains a person with id: ${id}`,
-          eventName
-        });
-      }
+      redisConnection.emit(successEvent, {
+        requestId,
+        data: set,
+        eventName
+      });
     } catch (err) {
       throw err;
     }
