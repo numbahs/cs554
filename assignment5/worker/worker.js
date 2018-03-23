@@ -88,9 +88,10 @@ let main = async () => {
         if (typeof first_name !== 'string') {
           redisConnection.emit(failedEvent, {
             requestId,
-            data: `${first_name} is not a string!`,
+            data: `${first_name} is not a valid first name!`,
             eventName
           });
+          return;
         } else {
           replace['first_name'] = first_name;
         }
@@ -100,9 +101,10 @@ let main = async () => {
         if (typeof last_name !== 'string') {
           redisConnection.emit(failedEvent, {
             requestId,
-            data: `${last_name} is not a string!`,
+            data: `${last_name} is not a valid last name!`,
             eventName
           });
+          return;
         } else {
           replace['last_name'] = last_name;
         }
@@ -112,9 +114,10 @@ let main = async () => {
         if (typeof email !== 'string') {
           redisConnection.emit(failedEvent, {
             requestId,
-            data: `${email} is not a string!`,
+            data: `${email} is not a valid email!`,
             eventName
           });
+          return;
         } else {
           replace['email'] = email;
         }
@@ -124,9 +127,10 @@ let main = async () => {
         if (typeof gender !== 'string') {
           redisConnection.emit(failedEvent, {
             requestId,
-            data: `${gender} is not a string!`,
+            data: `${gender} is not a valid gender!`,
             eventName
           });
+          return;
         } else {
           replace['gender'] = gender;
         }
@@ -136,31 +140,36 @@ let main = async () => {
         if (typeof ip_address !== 'string') {
           redisConnection.emit(failedEvent, {
             requestId,
-            data: `${ip_address} is not a string!`,
+            data: `${ip_address} is not a ip address!`,
             eventName
           });
+          return;
         } else {
           replace['ip_address'] = ip_address;
         }
       }
 
-      const result = data.map(x => x.id).indexOf(parseInt(id));
-
-      if (result) {
-        let set = Object.assign({}, data[result], replace);
-        data[result] = set;
-
-        redisConnection.emit(successEvent, {
-          requestId,
-          data: set,
-          eventName
-        });
+      if (replace.failed) {
+        console.error(replace.failed);
       } else {
-        redisConnection.emit(failedEvent, {
-          requestId,
-          data: `Server does not contain person with id: ${id}`,
-          eventName
-        });
+        const result = data.map(x => x.id).indexOf(parseInt(id));
+
+        if (result) {
+          let set = Object.assign({}, data[result], replace);
+          data[result] = set;
+
+          redisConnection.emit(successEvent, {
+            requestId,
+            data: set,
+            eventName
+          });
+        } else {
+          redisConnection.emit(failedEvent, {
+            requestId,
+            data: `Server does not contain person with id: ${id}`,
+            eventName
+          });
+        }
       }
     } catch (err) {
       throw err;
@@ -179,41 +188,46 @@ let main = async () => {
       if (typeof first_name !== 'string') {
         redisConnection.emit(failedEvent, {
           requestId,
-          data: `${first_name} is not a string!`,
+          data: `${first_name} is not a valid first name!`,
           eventName
         });
+        return;
       }
 
       if (typeof last_name !== 'string') {
         redisConnection.emit(failedEvent, {
           requestId,
-          data: `${last_name} is not a string!`,
+          data: `${last_name} is not a valid last name!`,
           eventName
         });
+        return;
       }
 
       if (typeof email !== 'string') {
         redisConnection.emit(failedEvent, {
           requestId,
-          data: `${email} is not a string!`,
+          data: `${email} is not a valid email!`,
           eventName
         });
+        return;
       }
 
       if (typeof gender !== 'string') {
         redisConnection.emit(failedEvent, {
           requestId,
-          data: `${gender} is not a string!`,
+          data: `${gender} is not a valid gender!`,
           eventName
         });
+        return;
       }
 
       if (typeof ip_address !== 'string') {
         redisConnection.emit(failedEvent, {
           requestId,
-          data: `${ip_address} is not a string!`,
+          data: `${ip_address} is not a valid ip address!`,
           eventName
         });
+        return;
       }
 
       let set = {
