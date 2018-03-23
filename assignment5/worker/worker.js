@@ -149,27 +149,23 @@ let main = async () => {
         }
       }
 
-      if (replace.failed) {
-        console.error(replace.failed);
+      const result = data.map(x => x.id).indexOf(parseInt(id));
+
+      if (result) {
+        let set = Object.assign({}, data[result], replace);
+        data[result] = set;
+
+        redisConnection.emit(successEvent, {
+          requestId,
+          data: set,
+          eventName
+        });
       } else {
-        const result = data.map(x => x.id).indexOf(parseInt(id));
-
-        if (result) {
-          let set = Object.assign({}, data[result], replace);
-          data[result] = set;
-
-          redisConnection.emit(successEvent, {
-            requestId,
-            data: set,
-            eventName
-          });
-        } else {
-          redisConnection.emit(failedEvent, {
-            requestId,
-            data: `Server does not contain person with id: ${id}`,
-            eventName
-          });
-        }
+        redisConnection.emit(failedEvent, {
+          requestId,
+          data: `Server does not contain person with id: ${id}`,
+          eventName
+        });
       }
     } catch (err) {
       throw err;
