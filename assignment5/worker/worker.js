@@ -152,9 +152,7 @@ let main = async () => {
 
         redisConnection.emit(successEvent, {
           requestId,
-          data: {
-            Event: `Person with id '${id}' has been successfully reassigned`
-          },
+          data: set,
           eventName
         });
       } else {
