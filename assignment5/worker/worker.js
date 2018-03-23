@@ -226,9 +226,9 @@ let main = async () => {
         ip_address
       };
 
-      const result = data.map(x => x.id).reverse();
+      const last = data.length - 1;
+      set.id = data[last] ? data[last].id + 1 : 1;
 
-      set.id = result[0] ? result[0] + 1 : 1;
       data.push(set);
 
       redisConnection.emit(successEvent, {
