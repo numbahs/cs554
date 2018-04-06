@@ -1,0 +1,21 @@
+{
+  "name": "cs-554-assignment6",
+  "version": "1.0.0",
+  "description": "CS-554 assignment6 Submission for Albert Tang",
+  "main": "app.js",
+  "scripts": {
+    "start": "concurrently 'node server' 'node worker/worker.js' ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Albert Tang",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "node-redis-pubsub": "^2.0.0",
+    "socket.io": "^2.1.0",
+    "uuid": "^3.2.1"
+  }
+}

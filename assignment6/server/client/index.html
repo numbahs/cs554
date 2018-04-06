@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Simple Searching Website</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://cdn.socket.io/socket.io-1.4.5.js" async></script>
+  <script type="text/javascript" src="/index.js" async></script>
+</head>
+
+<body>
+  <div class='container'>
+    <div class='content'>
+      <header>
+        Simple Searching Website
+      </header>
+      <form onsubmit='return sendMessage();' class='submission' id='submission'>
+        <label for="username">Enter a username!</label>
+        <input placeholder='Username here!' class='submission' id='username' />
+        <label for="query">Enter a query!</label>
+        <input placeholder='Query here!' class='submission' id='query' />
+        <label for="message">Enter a message!</label>
+        <input placeholder='Message here!' class='submission' id='message' />
+        <button>Submit!</button>
+      </form>
+    </div>
+    <div id="pictures"></div>
+  </div>
+</body>
+
+</html>
